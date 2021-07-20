@@ -79,10 +79,16 @@ def track(opt):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="demo.py")
     parser.add_argument(
-        "--cfg", type=str, default="cfg/yolov3_1088x608.cfg", help="cfg file path"
+        "--cfg",
+        type=str,
+        default="cfg/yolov3_1088x608.cfg",
+        help="cfg file path",
     )
     parser.add_argument(
-        "--weights", type=str, default="weights/latest.pt", help="path to weights file"
+        "--weights",
+        type=str,
+        default="weights/latest.pt",
+        help="path to weights file",
     )
     parser.add_argument(
         "--iou-thres",
@@ -91,7 +97,10 @@ if __name__ == "__main__":
         help="iou threshold required to qualify as detected",
     )
     parser.add_argument(
-        "--conf-thres", type=float, default=0.5, help="object confidence threshold"
+        "--conf-thres",
+        type=float,
+        default=0.5,
+        help="object confidence threshold",
     )
     parser.add_argument(
         "--nms-thres",
@@ -100,10 +109,22 @@ if __name__ == "__main__":
         help="iou threshold for non-maximum suppression",
     )
     parser.add_argument(
-        "--min-box-area", type=float, default=200, help="filter out tiny boxes"
+        "--min-box-area",
+        type=float,
+        default=200,
+        help="filter out tiny boxes",
     )
-    parser.add_argument("--track-buffer", type=int, default=30, help="tracking buffer")
-    parser.add_argument("--input-video", type=str, help="path to the input video")
+    parser.add_argument(
+        "--track-buffer",
+        type=int,
+        default=30,
+        help="tracking buffer",
+    )
+    parser.add_argument(
+        "--input-video",
+        type=str,
+        help="path to the input video",
+    )
     parser.add_argument(
         "--output-format",
         type=str,
@@ -112,7 +133,10 @@ if __name__ == "__main__":
         help="Expected output format. Video or text.",
     )
     parser.add_argument(
-        "--output-root", type=str, default="results", help="expected output root path"
+        "--output-root",
+        type=str,
+        default="results",
+        help="expected output root path",
     )
     opt = parser.parse_args()
     print(opt, end="\n\n")
